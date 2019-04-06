@@ -16,10 +16,17 @@
             /*flex使图片连载一起，flex-start使整个div高度与图片保持一致*/
         }
 
+        .images>img {
+            vertical-align: top;
+        }
+
         .window {
             width: 300px;
             overflow: hidden;
             /*width设置展示窗口的大小与图片一致，oh隐藏这个窗口外的图片*/
+        }
+        .red{
+            color: red;
         }
     </style>
 </head>
@@ -35,9 +42,11 @@
         </div>
     </div>
     <!--4.做按钮并在JS中写按钮控制的行为-->
-    <button id="p1">第1张</button>
-    <button id="p2">第2张</button>
-    <button id="p3">第3张</button>
+    <span id=buttons>
+        <span>第1张</span>
+        <span>第2张</span>
+        <span>第3张</span>
+    </span>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./main.js"></script>
