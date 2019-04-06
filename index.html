@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery实现轮播</title>
+
+    <style>
+        /*3.CSS设置样式*/
+        .images {
+            display: flex;
+            align-items: flex-start;
+            transition: transform 0.5s;
+            /*flex使图片连载一起，flex-start使整个div高度与图片保持一致*/
+        }
+
+        .window {
+            width: 300px;
+            overflow: hidden;
+            /*width设置展示窗口的大小与图片一致，oh隐藏这个窗口外的图片*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <!--2.做一个窗口把images包住，作为展示窗口，大小与一张图片的大小一致-->
+        <div class="images" id="images">
+            <!--1.选择三张图片宽高相等，放在同一个div下-->
+            <img src="./img/img1.jpg" width=300 alt="">
+            <img src="./img/img2.jpg" width=300 alt="">
+            <img src="./img/img3.jpg" width=300 alt="">
+        </div>
+    </div>
+    <!--4.做按钮并在JS中写按钮控制的行为-->
+    <button id="p1">第1张</button>
+    <button id="p2">第2张</button>
+    <button id="p3">第3张</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
